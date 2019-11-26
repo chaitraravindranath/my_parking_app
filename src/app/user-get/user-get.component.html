@@ -1,0 +1,48 @@
+
+<table class="table table-hover" style="margin-left: -100px;">  
+    <thead>  
+    <tr>  
+            <th>SAP ID</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <!-- <th>Parking Start Date</th>
+            <th>Parking End Date</th>
+            <th>Parking Start Time</th>
+            <th>Parking End Time</th>
+            <th>Parking Lot</th>
+            <th>Parking Level</th>
+            <th>Parking Slot Number</th>
+            <th>Parking Type</th>
+            <th>Parking Availability Status</th>
+            <th>Vehicle Type</th>
+            <th>Vehicle License Plate Number</th> -->
+            <th colspan="2">Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+        <tr *ngFor="let user of users | paginate: config">  
+            <td>{{ user.UserSAPID }}</td>  
+            <td>{{ user.FullName }}</td>  
+            <td>{{ user.UserMobile }}</td>  
+            <td>{{ user.UserEmail }}</td> 
+            <!-- <td>{{ user.UserParkingStartDate }}</td>  
+            <td>{{ user.UserParkingEndDate }}</td>  
+            <td>{{ user.UserParkingStartTime }}</td>  
+            <td>{{ user.UserParkingEndTime }}</td>  
+            <td>{{ user.UserParkingLot }}</td>  
+            <td>{{ user.UserParkingLevel }}</td>  
+            <td>{{ user.UserParkingSlotNumber }}</td>  
+            <td>{{ user.UserParkingType }}</td>
+            <td>{{ user.UserParkingAvailabilityStatus }}</td> 
+            <td>{{ user.UserVehicleType }}</td>
+            <td>{{ user.UserVehicleLicensePlateNumber }}</td>     -->
+            <td><a [routerLink]="['/edit', user.id]"><img src="\assets\images\edit.jpg" width="30" height="30"></a></td>  
+            <td><a (click)= "deleteUser(user.id)"><img src="\assets\images\delete.png" width="30" height="30"></a></td>  
+        </tr>  
+        <tr>
+            <a [routerLink]="['/createUser']" class="btn btn-link">Create New User</a> 
+        </tr>
+    </tbody>  
+  </table>  
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>

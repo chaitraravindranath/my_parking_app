@@ -1,0 +1,107 @@
+{
+  "users": [
+    {
+      "UserSAPID": "9",
+      "FullName": "Raju Singh",
+      "UserMobile": "9845001888",
+      "UserEmail": "raju.singh@hcl.com",
+      "id": 9
+    },
+    {
+      "UserSAPID": "10",
+      "FullName": "Edwin Rajan",
+      "UserMobile": "9845000010",
+      "UserEmail": "edwin.rajan@hcl.com",
+      "id": 10
+    },
+    {
+      "UserSAPID": "51840887",
+      "FullName": "Anisha",
+      "UserMobile": "9876564532",
+      "UserEmail": "Anisha@gmail.com",
+      "id": 11
+    }
+  ],
+  "parkingLots": [
+    {
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": 11,
+      "UserVehicleType": "Four Wheeler",
+      "id": 5
+    },
+    {
+      "id": 9,
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": 1,
+      "UserParkingSlotNumber": 12,
+      "UserVehicleType": "Four Wheeler"
+    },
+    {
+      "id": 10,
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": 1,
+      "UserParkingSlotNumber": 13,
+      "UserVehicleType": "Four Wheeler"
+    },
+    {
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": 10,
+      "UserVehicleType": "Four Wheeler",
+      "id": 5
+    },
+    {
+      "id": 9,
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": 1,
+      "UserParkingSlotNumber": 9,
+      "UserVehicleType": "Four Wheeler"
+    },
+    {
+      "id": 10,
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": 1,
+      "UserParkingSlotNumber": 43,
+      "UserVehicleType": "Four Wheeler"
+    }
+  ],
+  "bookedParkingLots": [
+    {
+      "UserParkingStartDate": "22/11/2019",
+      "UserParkingEndDate": "28/11/2019",
+      "UserParkingStartTime": "09:00",
+      "UserParkingEndTime": "19:00",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "10",
+      "UserVehicleType": "Four Wheeler",
+      "UserVehicleLicensePlateNumber": "KA 88 ZE 1237",
+      "id": 5
+    },
+    {
+      "id": 9,
+      "UserParkingStartDate": "01/12/2019",
+      "UserParkingEndDate": "30/12/2019",
+      "UserParkingStartTime": "09:00",
+      "UserParkingEndTime": "18:00",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": 1,
+      "UserParkingSlotNumber": 9,
+      "UserVehicleType": "Four Wheeler",
+      "UserVehicleLicensePlateNumber": "KA 88 ZE 1239"
+    },
+    {
+      "id": 10,
+      "UserParkingStartDate": "25/11/2019",
+      "UserParkingEndDate": "25/11/2019",
+      "UserParkingStartTime": "09:00",
+      "UserParkingEndTime": "18:30",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": 1,
+      "UserParkingSlotNumber": 43,
+      "UserVehicleType": "Four Wheeler",
+      "UserVehicleLicensePlateNumber": "KA 88 ZE 1240"
+    }
+  ]
+}

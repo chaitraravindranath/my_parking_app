@@ -1,0 +1,27 @@
+<div class="form_container">
+    <h3>Login</h3>
+    <form #myForm [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+
+        <div class="row">
+
+            <div class="col-md-12 form-group">
+                <label>UserName <span>*</span></label> <br>
+                <input type="text" name="username" formControlName="username" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <label>Password <span>*</span></label> <br>
+                <input type="password" class="fortextbox" name="passwd" formControlName="passwd" />
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12 form-group">
+                <button type="button" [disabled]="!formdata.valid" value="Login">Login</button>
+                <a [routerLink]="['/createUser']" class="btn btn-link">Register</a>
+            </div>
+        </div>
+    </form>
+</div>
+

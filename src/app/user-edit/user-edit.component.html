@@ -1,0 +1,221 @@
+<div class="card">
+  <div class="card-body">
+      <form [formGroup]="angForm" novalidate>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-4"><strong>SAP ID</strong></label>
+                <input type="text" class="form-control" formControlName="UserSAPID" #UserSAPID />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserSAPID'].invalid && (angForm.controls['UserSAPID'].dirty || angForm.controls['UserSAPID'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserSAPID'].errors.required">
+                  SAP ID is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-4"><strong>Name</strong></label>
+                <input type="text" class="form-control" formControlName="FullName" #FullName />
+              </div>
+              <div
+                *ngIf="angForm.controls['FullName'].invalid && (angForm.controls['FullName'].dirty || angForm.controls['FullName'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['FullName'].errors.required">
+                  Name is required.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-4"><strong>Mobile</strong></label>
+                <input type="text" class="form-control" formControlName="UserMobile" #UserMobile />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserMobile'].invalid && (angForm.controls['UserMobile'].dirty || angForm.controls['UserMobile'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserMobile'].errors.required">
+                  Mobile is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-4"><strong>Email</strong></label>
+                <input type="text" class="form-control" formControlName="UserEmail" #UserEmail />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserEmail'].invalid && (angForm.controls['UserEmail'].dirty || angForm.controls['UserEmail'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserEmail'].errors.required">
+                  Email is required.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-8"><strong>Parking Start Date</strong></label>
+                <input type="text" class="form-control" formControlName="UserParkingStartDate" #UserParkingStartDate />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserParkingStartDate'].invalid && (angForm.controls['UserParkingStartDate'].dirty || angForm.controls['UserParkingStartDate'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserParkingStartDate'].errors.required">
+                  Parking Start Date is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-8"><strong>Parking End Date</strong></label>
+                <input type="text" class="form-control" formControlName="UserParkingEndDate" #UserParkingEndDate />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserParkingEndDate'].invalid && (angForm.controls['UserParkingEndDate'].dirty || angForm.controls['UserParkingEndDate'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserParkingEndDate'].errors.required">
+                  Parking End Date is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-8"><strong>Parking Start Time</strong></label>
+                <input type="time" class="form-control" formControlName="UserParkingStartTime" #UserParkingStartTime />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserParkingStartTime'].invalid && (angForm.controls['UserParkingStartTime'].dirty || angForm.controls['UserParkingStartTime'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserParkingStartTime'].errors.required">
+                  Parking Start Time is required.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-8"><strong>Parking End Time</strong></label>
+                <input type="time" class="form-control" formControlName="UserParkingEndTime" #UserParkingEndTime />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserParkingEndTime'].invalid && (angForm.controls['UserParkingEndTime'].dirty || angForm.controls['UserParkingEndTime'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserParkingEndTime'].errors.required">
+                  Parking End Time is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-8"><strong>Parking Lot</strong></label>
+                <input type="text" class="form-control" formControlName="UserParkingLot" #UserParkingLot />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserParkingLot'].invalid && (angForm.controls['UserParkingLot'].dirty || angForm.controls['UserParkingLot'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserParkingLot'].errors.required">
+                  Parking Lot is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-8"><strong>Parking Level</strong></label>
+                <input type="text" class="form-control" formControlName="UserParkingLevel" #UserParkingLevel />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserParkingLevel'].invalid && (angForm.controls['UserParkingLevel'].dirty || angForm.controls['UserParkingLevel'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserParkingLevel'].errors.required">
+                  Parking Level is required.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-8"><strong>Parking Slot Number</strong></label>
+                <input type="text" class="form-control" formControlName="UserParkingSlotNumber" #UserParkingSlotNumber />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserParkingSlotNumber'].invalid && (angForm.controls['UserParkingSlotNumber'].dirty || angForm.controls['UserParkingSlotNumber'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserParkingSlotNumber'].errors.required">
+                  Parking Slot Number is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-8"><strong>Parking Type</strong></label>
+                <input type="text" class="form-control" formControlName="UserParkingType" #UserParkingType />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserParkingType'].invalid && (angForm.controls['UserParkingType'].dirty || angForm.controls['UserParkingType'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserParkingType'].errors.required">
+                  Parking Type is required.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label class="col-md-8"><strong>Parking Status</strong></label>
+                <input type="text" class="form-control" formControlName="UserParkingAvailabilityStatus"
+                  #UserParkingAvailabilityStatus />
+              </div>
+              <div
+                *ngIf="angForm.controls['UserParkingAvailabilityStatus'].invalid && (angForm.controls['UserParkingAvailabilityStatus'].dirty || angForm.controls['UserParkingAvailabilityStatus'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="angForm.controls['UserParkingAvailabilityStatus'].errors.required">
+                  Parking Status is required.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label class="col-md-8"><strong>Vehicle Type</strong></label>
+                  <input type="text" class="form-control" formControlName="UserVehicleType" #UserVehicleType />
+                </div>
+                <div
+                  *ngIf="angForm.controls['UserVehicleType'].invalid && (angForm.controls['UserVehicleType'].dirty || angForm.controls['UserVehicleType'].touched)"
+                  class="alert alert-danger">
+                  <div *ngIf="angForm.controls['UserVehicleType'].errors.required">
+                    Vehicle Type is required.
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label class="col-md-8"><strong>Vehicle License Plate Number</strong></label>
+                  <input type="text" class="form-control" formControlName="UserVehicleLicensePlateNumber" #UserVehicleLicensePlateNumber />
+                </div>
+                <div
+                  *ngIf="angForm.controls['UserVehicleLicensePlateNumber'].invalid && (angForm.controls['UserVehicleLicensePlateNumber'].dirty || angForm.controls['UserVehicleLicensePlateNumber'].touched)"
+                  class="alert alert-danger">
+                  <div *ngIf="angForm.controls['UserVehicleLicensePlateNumber'].errors.required">
+                    Parking Type is required.
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          <div class="form-group">
+            <button
+              (click)="updateUser(UserSAPID.value, FullName.value, UserMobile.value, UserEmail.value)"
+              type="submit" class="btn btn-primary" [disabled]="angForm.pristine || angForm.invalid">
+              Update User
+            </button>
+          </div>
+        </form>
+  </div>
+</div>
