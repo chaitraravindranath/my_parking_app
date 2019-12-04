@@ -1,0 +1,93 @@
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="bookingForm" novalidate>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label class="col-md-8"><strong>Parking Start Date</strong></label>
+                        <input type="date" class="form-control" formControlName="UserParkingStartDate"
+                            #UserParkingStartDate />
+                    </div>
+                    <div *ngIf="bookingForm.controls['UserParkingStartDate'].invalid && (bookingForm.controls['UserParkingStartDate'].dirty || bookingForm.controls['UserParkingStartDate'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="bookingForm.controls['UserParkingStartDate'].errors.required">
+                            Parking Start Date is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label class="col-md-8"><strong>Parking End Date</strong></label>
+                        <input type="date" class="form-control" formControlName="UserParkingEndDate"
+                            #UserParkingEndDate />
+                    </div>
+                    <div *ngIf="bookingForm.controls['UserParkingEndDate'].invalid && (bookingForm.controls['UserParkingEndDate'].dirty || bookingForm.controls['UserParkingEndDate'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="bookingForm.controls['UserParkingEndDate'].errors.required">
+                            Parking End Date is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label class="col-md-8"><strong>Parking Lot</strong></label>
+                        <input type="text" class="form-control" formControlName="UserParkingLot" #UserParkingLot />
+                    </div>
+                    <div *ngIf="bookingForm.controls['UserParkingLot'].invalid && (bookingForm.controls['UserParkingLot'].dirty || bookingForm.controls['UserParkingLot'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="bookingForm.controls['UserParkingLot'].errors.required">
+                            Parking Lot is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label class="col-md-8"><strong>Parking Level</strong></label>
+                        <input type="text" class="form-control" formControlName="UserParkingLevel" #UserParkingLevel />
+                    </div>
+                    <div *ngIf="bookingForm.controls['UserParkingLevel'].invalid && (bookingForm.controls['UserParkingLevel'].dirty || bookingForm.controls['UserParkingLevel'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="bookingForm.controls['UserParkingLevel'].errors.required">
+                            Parking Level is required.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label class="col-md-8"><strong>Parking Slot Number</strong></label>
+                        <input type="text" class="form-control" formControlName="UserParkingSlotNumber"
+                            #UserParkingSlotNumber />
+                    </div>
+                    <div *ngIf="bookingForm.controls['UserParkingSlotNumber'].invalid && (bookingForm.controls['UserParkingSlotNumber'].dirty || bookingForm.controls['UserParkingSlotNumber'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="bookingForm.controls['UserParkingSlotNumber'].errors.required">
+                            Parking Slot Number is required.
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label class="col-md-8"><strong>Parking Type</strong></label>
+                        <input type="text" class="form-control" formControlName="UserParkingType" #UserParkingType />
+                    </div>
+                    <div *ngIf="bookingForm.controls['UserParkingType'].invalid && (bookingForm.controls['UserParkingType'].dirty || bookingForm.controls['UserParkingType'].touched)"
+                        class="alert alert-danger">
+                        <div *ngIf="bookingForm.controls['UserParkingType'].errors.required">
+                            Parking Type is required.
+                        </div>
+                    </div>
+                </div>               
+            </div>
+            <div class="form-group">
+                <button (click)="deleteFromAvailableParking(UserParkingSlotNumber.value); confirmBooking(UserParkingStartDate.value, UserParkingEndDate.value,UserParkingLot.value, UserParkingLevel.value,UserParkingSlotNumber.value,UserParkingType.value)"
+                    type="submit" class="btn btn-primary" [disabled]="bookingForm.pristine || bookingForm.invalid">
+                   Book Parking
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

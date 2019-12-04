@@ -3,12 +3,12 @@ import User from '../User';
 import { UsersService } from '../users.service'; 
 
 @Component({
-  selector: 'app-user-get',
-  templateUrl: './user-get.component.html',
-  styleUrls: ['./user-get.component.css']
+  selector: 'app-get-user',
+  templateUrl: './get-user.component.html',
+  styleUrls: ['./get-user.component.css']
 })
 
-export class UserGetComponent implements OnInit {
+export class GetUserComponent implements OnInit {
 
   users: User[]; 
   config: any;
@@ -35,9 +35,7 @@ export class UserGetComponent implements OnInit {
   }
 
   deleteUser(id: any) { 
-    debugger
     this.ps.deleteUser(id).subscribe(res => { 
-      console.log("res"+JSON.stringify(res));
       this.fetchData(); 
     });  
 }

@@ -1,0 +1,26 @@
+
+<button type="button" class="btn btn-secondary float-right" [routerLink]="['']">Back</button>
+
+<table class="table table-hover" style="margin-left: -100px;">  
+    <thead>  
+    <tr>  
+            <th>SAP ID</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th colspan="2">Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+        <tr *ngFor="let user of users | paginate: config">  
+            <td>{{ user.FullName }}</td>  
+            <td>{{ user.UserMobile }}</td>  
+            <td>{{ user.UserEmail }}</td> 
+            <td><a [routerLink]="['/edit', user.id]"><img src="\assets\images\edit.jpg" width="30" height="30"></a></td>  
+            <td><a (click)= "deleteUser(user.id)"><img src="\assets\images\delete.png" width="30" height="30"></a></td>  
+        </tr>  
+    </tbody>  
+  </table>  
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+
+

@@ -4,39 +4,33 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { UserAddComponent } from './user-add/user-add.component';
-import { UserGetComponent } from './user-get/user-get.component';
-import { UserEditComponent } from './user-edit/user-edit.component';
+import { GetUserComponent } from './get-user/get-user.component';
 import { UsersService } from './users.service';  
 import { NgxPaginationModule} from 'ngx-pagination';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { MyparkingComponent } from './myparking/myparking.component';
-import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
-import { GuestsearchComponent } from './guestsearch/guestsearch.component';
-import { VipsearchComponent } from './vipsearch/vipsearch.component';
+import { GetParkingComponent } from './get-parking/get-parking.component';
+import { RegisterUserComponent } from './register-user/register-user.component';
+import { BookParkingComponent } from './book-parking/book-parking.component';
+import { MyParkingComponent } from './my-parking/my-parking.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserAddComponent,
-    UserGetComponent,
-    UserEditComponent,
+    GetUserComponent,
     HeaderComponent,
-    FooterComponent,
-    MyparkingComponent,
     LoginComponent,
-    GuestsearchComponent,
-    VipsearchComponent
+    GetParkingComponent,
+    RegisterUserComponent,
+    BookParkingComponent,
+    MyParkingComponent
   ],
   imports: [
-    NgbModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]

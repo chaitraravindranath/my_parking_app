@@ -1,0 +1,22 @@
+
+<table class="table table-hover" style="margin-left: -100px;">  
+    <thead>  
+    <tr>  
+            <th>Parking Lot</th>
+            <th>Parking Level</th>
+            <th>Parking Slot Number</th>
+            <th>Parking Type</th>
+            <th colspan="2">Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+        <tr *ngFor="let user of users">  
+            <td>{{ user.UserParkingLot }}</td>  
+            <td>{{ user.UserParkingLevel }}</td>  
+            <td>{{ user.UserParkingSlotNumber }}</td>  
+            <td>{{ user.UserParkingType }}</td>
+            <td><a [routerLink]="['/bookparking', user.id]" class="btn btn-primary" style="color:white;">BOOK</a></td>  
+        </tr>  
+    </tbody>  
+  </table>  
+

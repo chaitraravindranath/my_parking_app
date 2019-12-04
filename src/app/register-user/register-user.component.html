@@ -1,0 +1,74 @@
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="registerForm" novalidate>
+            <div class="form-group">
+                <label class="col-md-4"><strong>User Name</strong></label>
+                <input type="text" class="form-control" formControlName="UserName" #UserName />
+            </div>
+            <div *ngIf="registerForm.controls['UserName'].invalid && (registerForm.controls['UserName'].dirty || registerForm.controls['UserName'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="registerForm.controls['UserName'].errors.required">
+                        UserName is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4"><strong>Password</strong></label>
+                <input type="text" class="form-control" formControlName="Password" #Password />
+            </div>
+            <div *ngIf="registerForm.controls['Password'].invalid && (registerForm.controls['Password'].dirty || registerForm.controls['Password'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="registerForm.controls['Password'].errors.required">
+                        Password is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4"><strong>Role</strong></label>
+                <input type="text" class="form-control" formControlName="Role" #Role />
+            </div>
+            <div *ngIf="registerForm.controls['Role'].invalid && (registerForm.controls['Role'].dirty || registerForm.controls['Role'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="registerForm.controls['Role'].errors.required">
+                    Role is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4"><strong>Name</strong></label>
+                <input type="text" class="form-control" formControlName="FullName" #FullName />
+            </div>
+            <div *ngIf="registerForm.controls['FullName'].invalid && (registerForm.controls['FullName'].dirty || registerForm.controls['FullName'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="registerForm.controls['FullName'].errors.required">
+                    Name is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4"><strong>Mobile</strong></label>
+                <input type="text" class="form-control" formControlName="UserMobile" #UserMobile />
+            </div>
+            <div *ngIf="registerForm.controls['UserMobile'].invalid && (registerForm.controls['UserMobile'].dirty || registerForm.controls['UserMobile'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="registerForm.controls['UserMobile'].errors.required">
+                    Mobile is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4"><strong>Email</strong></label>
+                <input type="text" class="form-control" formControlName="UserEmail" #UserEmail />
+            </div>
+            <div *ngIf="registerForm.controls['UserEmail'].invalid && (registerForm.controls['UserEmail'].dirty || registerForm.controls['UserEmail'].touched)"
+                class="alert alert-danger">
+                <div *ngIf="registerForm.controls['UserEmail'].errors.required">
+                    Email is required.
+                </div>
+            </div>
+            <div class="form-group">
+                <button
+                    (click)="registerUser(UserName.value, Password.value, Role.value,FullName.value, UserMobile.value, UserEmail.value)"
+                    type="submit" class="btn btn-space btn-primary" [disabled]="registerForm.pristine || registerForm.invalid">
+                    Submit
+                </button>
+                <button type="button" class="btn btn-space btn-secondary" [routerLink]="['']">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -15,35 +15,26 @@ export class LoginComponent implements OnInit {
 
    ngOnInit() {
       this.formdata = new FormGroup({
-         username: new FormControl("", Validators.compose([
+         UserName: new FormControl("", Validators.compose([
             Validators.required,
             Validators.minLength(5)
          ])),
-         passwd: new FormControl("", this.passwordvalidation)
+         passwd: new FormControl("", Validators.required)
       });
-   }
-
-   passwordvalidation(formcontrol) {
-      if (formcontrol.value.length < 5) {
-         return { "passwd": true };
-      }
    }
 
    onClickSubmit(data) {
       this.usersService.validateUser(data).subscribe(logindata => {
-         console.log(logindata);
          if (logindata.length > 0) {
-            console.log(logindata[0].UserName);
             this.usersService.getUserInfo(logindata[0].UserName).subscribe(data => {
                if (data[0]['Role'] == "Admin") {
-                  alert("Login Successful");
                   this.router.navigate(['/users']);
                }
-               else if (data[0]['role'] == "Guest User") {
-                  this.router.navigate(['/search/guestUserParking']);
+               else if (data[0]['Role'] == "Guest") {
+                  this.router.navigate(['/getparking']);
                }
-               else if (data[0]['role'] == "VIP User") {
-                  this.router.navigate(['/search/VIPUserParking']);
+               else if (data[0]['Role'] == "VIP") {
+                  this.router.navigate(['/myparking',data[0]['id']]);
                }
             })
          }

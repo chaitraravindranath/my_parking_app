@@ -1,0 +1,41 @@
+<h4>My Parking Details</h4>
+<br>
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="myForm" novalidate>
+            <div class="form-group">
+                <label class="col-md-8"><strong>Parking Start Date</strong></label>
+                <label>{{user.UserParkingStartDate}}</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-8"><strong>Parking End Date</strong></label>
+                <label>{{user.UserParkingEndDate}}</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-8"><strong>Parking Lot</strong></label>
+                <label>{{user.UserParkingLot}}</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-8"><strong>Parking Level</strong></label>
+                <label>{{user.UserParkingLevel}}</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-8"><strong>Parking Slot Number</strong></label>
+                <label>{{user.UserParkingSlotNumber}}</label>
+            </div>
+            <div class="form-group">
+                <label class="col-md-8"><strong>Parking Type</strong></label>
+                <label>{{user.UserParkingType}}</label>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<div class="form-group">
+    <button *ngIf="user.UserParkingType=='VIP'"
+        (click)="surrenderParking( user.UserParkingStartDate, user.UserParkingEndDate, user.UserParkingLot, user.UserParkingLevel, user.UserParkingSlotNumber, user.UserParkingType)"
+        type="submit" class="btn btn-secondary"> Surrender Parking </button>
+        <br>
+</div>
+
+   

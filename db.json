@@ -1,54 +1,74 @@
 {
   "users": [
     {
-      "UserSAPID": "9",
-      "FullName": "Raju Singh",
-      "UserMobile": "9845001888",
-      "UserEmail": "raju.singh@hcl.com",
-      "id": 9
-    },
-    {
-      "UserSAPID": "10",
-      "FullName": "Edwin Rajan",
-      "UserMobile": "9845000010",
-      "UserEmail": "edwin.rajan@hcl.com",
-      "id": 10
-    },
-    {
-      "UserSAPID": "51840887",
-      "FullName": "Anisha",
-      "UserMobile": "9876564532",
-      "UserEmail": "Anisha@gmail.com",
-      "id": 11
-    }
-  ],
-  "parkingLots": [
-    {
-      "UserParkingLot": "Tower 1",
-      "UserParkingLevel": "3",
-      "UserParkingSlotNumber": 11,
-      "UserVehicleType": "Four Wheeler",
+      "UserName": "admin",
+      "Password": "admin123",
+      "Role": "Admin",
+      "FullName": "Chandrakanth",
+      "UserMobile": "8123774955",
+      "UserEmail": "chandra@gmail.com",
       "id": 5
     },
     {
-      "id": 9,
-      "UserParkingLot": "Tower 1",
-      "UserParkingLevel": 1,
-      "UserParkingSlotNumber": 12,
-      "UserVehicleType": "Four Wheeler"
+      "UserName": "chaitra123",
+      "Password": "chaitra123",
+      "Role": "Guest",
+      "FullName": "Chaitra",
+      "UserMobile": "8123774833",
+      "UserEmail": "chaitra@gmail.com",
+      "id": 10
     },
+    {
+      "UserName": "Pradeep123",
+      "Password": "pradeep123",
+      "Role": "VIP",
+      "FullName": "Pradeep",
+      "UserMobile": "9876565743",
+      "UserEmail": "pradeep@gmail.com",
+      "id": 11
+    },
+    {
+      "UserName": "anupama123",
+      "Password": "anupama123",
+      "Role": "Guest",
+      "FullName": "Anupama",
+      "UserMobile": "8105464184",
+      "UserEmail": "anupama@gmail.com",
+      "id": 12
+    },
+    {
+      "UserName": "sachin",
+      "Password": "sachin123",
+      "Role": "VIP",
+      "FullName": "Sachin",
+      "UserMobile": "8147327534",
+      "UserEmail": "sachin@gmail.com",
+      "id": 13
+    }
+  ],
+  "parkinglots": [
     {
       "id": 10,
       "UserParkingLot": "Tower 1",
+      "UserParkingLevel": 3,
+      "UserParkingSlotNumber": 11,
+      "UserParkingType": "Guest",
+      "UserParkingAvailabilityStatus": "Available"
+    },
+    {
+      "id": 15,
+      "UserParkingLot": "Tower 1",
       "UserParkingLevel": 1,
-      "UserParkingSlotNumber": 13,
-      "UserVehicleType": "Four Wheeler"
+      "UserParkingSlotNumber": 4,
+      "UserParkingType": "VIP",
+      "UserParkingAvailabilityStatus": "Occupied"
     },
     {
       "UserParkingLot": "Tower 1",
-      "UserParkingLevel": "3",
-      "UserParkingSlotNumber": 10,
-      "UserVehicleType": "Four Wheeler",
+      "UserParkingLevel": 1,
+      "UserParkingSlotNumber": 5,
+      "UserParkingType": "VIP",
+      "UserParkingAvailabilityStatus": "Available",
       "id": 5
     },
     {
@@ -56,52 +76,346 @@
       "UserParkingLot": "Tower 1",
       "UserParkingLevel": 1,
       "UserParkingSlotNumber": 9,
-      "UserVehicleType": "Four Wheeler"
+      "UserParkingType": "VIP",
+      "UserParkingAvailabilityStatus": "Available"
     },
     {
-      "id": 10,
+      "id": 17,
       "UserParkingLot": "Tower 1",
-      "UserParkingLevel": 1,
+      "UserParkingLevel": 3,
       "UserParkingSlotNumber": 43,
-      "UserVehicleType": "Four Wheeler"
+      "UserParkingType": "Guest",
+      "UserParkingAvailabilityStatus": "Occupied"
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "1",
+      "UserParkingSlotNumber": "16",
+      "UserParkingType": "VIP",
+      "id": 18
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "1",
+      "UserParkingSlotNumber": "18",
+      "UserParkingType": "VIP",
+      "id": 19
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "1",
+      "UserParkingSlotNumber": "12",
+      "UserParkingType": "VIP",
+      "id": 20
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "12",
+      "UserParkingType": "VIP",
+      "id": 21
     }
   ],
   "bookedParkingLots": [
     {
       "UserParkingStartDate": "22/11/2019",
       "UserParkingEndDate": "28/11/2019",
-      "UserParkingStartTime": "09:00",
-      "UserParkingEndTime": "19:00",
       "UserParkingLot": "Tower 1",
       "UserParkingLevel": "3",
       "UserParkingSlotNumber": "10",
-      "UserVehicleType": "Four Wheeler",
-      "UserVehicleLicensePlateNumber": "KA 88 ZE 1237",
+      "UserParkingType": "Guest",
+      "UserParkingAvailabilityStatus": "Occupied",
       "id": 5
     },
     {
       "id": 9,
       "UserParkingStartDate": "01/12/2019",
       "UserParkingEndDate": "30/12/2019",
-      "UserParkingStartTime": "09:00",
-      "UserParkingEndTime": "18:00",
       "UserParkingLot": "Tower 1",
-      "UserParkingLevel": 1,
-      "UserParkingSlotNumber": 9,
-      "UserVehicleType": "Four Wheeler",
-      "UserVehicleLicensePlateNumber": "KA 88 ZE 1239"
+      "UserParkingLevel": "1",
+      "UserParkingSlotNumber": "9",
+      "UserParkingType": "Guest",
+      "UserParkingAvailabilityStatus": "Occupied"
     },
     {
       "id": 10,
       "UserParkingStartDate": "25/11/2019",
       "UserParkingEndDate": "25/11/2019",
-      "UserParkingStartTime": "09:00",
-      "UserParkingEndTime": "18:30",
       "UserParkingLot": "Tower 1",
-      "UserParkingLevel": 1,
-      "UserParkingSlotNumber": 43,
-      "UserVehicleType": "Four Wheeler",
-      "UserVehicleLicensePlateNumber": "KA 88 ZE 1240"
+      "UserParkingLevel": "1",
+      "UserParkingSlotNumber": "43",
+      "UserParkingType": "Guest",
+      "UserParkingAvailabilityStatus": "Occupied"
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "UserParkingAvailabilityStatus": "Occupied",
+      "id": 11
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "12",
+      "UserParkingType": "Guest",
+      "id": 12
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "12",
+      "UserParkingType": "VIP",
+      "id": 13
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 14
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 15
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 16
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "1",
+      "UserParkingSlotNumber": "9",
+      "UserParkingType": "VIP",
+      "id": 17
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 18
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 19
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 20
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 21
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 22
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 23
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 24
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 25
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 26
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 27
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 28
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 29
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 30
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 31
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 32
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 33
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-14",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "12",
+      "UserParkingType": "Guest",
+      "id": 34
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-12",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "12",
+      "UserParkingType": "Guest",
+      "id": 35
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-23",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "12",
+      "UserParkingType": "Guest",
+      "id": 36
+    },
+    {
+      "UserParkingStartDate": "2019-12-12",
+      "UserParkingEndDate": "2019-12-23",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 37
+    },
+    {
+      "UserParkingStartDate": "2019-12-22",
+      "UserParkingEndDate": "2019-12-25",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 38
+    },
+    {
+      "UserParkingStartDate": "2019-12-14",
+      "UserParkingEndDate": "2019-12-16",
+      "UserParkingLot": "Tower 1",
+      "UserParkingLevel": "3",
+      "UserParkingSlotNumber": "11",
+      "UserParkingType": "Guest",
+      "id": 39
     }
   ]
 }
